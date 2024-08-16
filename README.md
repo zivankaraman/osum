@@ -19,7 +19,7 @@ You can install the current stable version of `osum` from [CRAN](https://cran.r-
 install.packages("osum")
 ```
 
-Windows and MacOS binary packages are available from here.
+Windows and macOS binary packages are available from here.
 
 ### Development version
 
@@ -36,4 +36,4 @@ Read through the [GET STARTED](https://zivankaraman.github.io/osum/articles/osum
 
 ## License
 
-This package is released under [GPL-3](https://cloud.r-project.org/web/licenses/GPL-3).
+This package is released under [GPL-3](https://cran.r-project.org/web/licenses/GPL-3).
