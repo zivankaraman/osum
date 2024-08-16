@@ -145,17 +145,31 @@ this order depends on object names (this is different from the original S-PLUS f
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     <p>An object of (S3) class <code>"objects.summary"</code>, which inherits from class <code>"data.frame"</code>.
 Its components (printed as columns) are those specified in argument <code>what</code>. Each component
-contains one type of information for all selected objects. They are at most the following:</p><ul><li><p><code>data.class</code> - a factor (if <code>all.classes=FALSE)</code>, or a list of character
+contains one type of information for all selected objects. They are at most the following:</p>
+<dl><dt><code>data.class</code></dt>
+<dd><p>a factor (if <code>all.classes=FALSE)</code>, or a list of character
  vectors (if <code>all.classes=TRUE)</code> containing the data class information. This is defined
  as in the function <code><a href="https://rdrr.io/r/base/data.class.html" class="external-link">data.class</a></code>, with the exception that when <code>all.classes=TRUE</code>, the summary
  will contain the entire class attribute for each object which has one, whereas function <code>data.class</code>
- returns only the first element of this vector.</p></li>
-<li><p><code>storage.mode</code> - a factor giving the storage mode information, as returned by function <code><a href="https://rdrr.io/r/base/mode.html" class="external-link">storage.mode</a></code>.</p></li>
-<li><p><code>mode</code> - a factor giving the mode information, as returned by function <code><a href="https://rdrr.io/r/base/mode.html" class="external-link">mode</a></code>.</p></li>
-<li><p><code>typeof</code> - a factor giving the R internal type or storage mode information, as returned by function <code><a href="https://rdrr.io/r/base/typeof.html" class="external-link">typeof</a></code>.</p></li>
-<li><p><code>extent</code> -  a list, each of whose components is a numeric vector giving the dimension of an object, or its length if it is dimensionless.</p></li>
-<li><p><code>object.size</code> - a numeric vector giving the object sizes in bytes, as returned by function <code><a href="https://rdrr.io/r/utils/object.size.html" class="external-link">object.size</a></code>.</p></li>
-</ul><p>The purpose of the dedicated class <code>objects.summary</code> is only to provide customized
+ returns only the first element of this vector.</p></dd>
+
+ <dt><code>storage.mode</code></dt>
+<dd><p>a factor giving the storage mode information, as returned by function <code><a href="https://rdrr.io/r/base/mode.html" class="external-link">storage.mode</a></code>.</p></dd>
+
+ <dt><code>mode</code></dt>
+<dd><p>a factor giving the mode information, as returned by function <code><a href="https://rdrr.io/r/base/mode.html" class="external-link">mode</a></code>.</p></dd>
+
+ <dt><code>typeof</code></dt>
+<dd><p>a factor giving the R internal type or storage mode information, as returned by function <code><a href="https://rdrr.io/r/base/typeof.html" class="external-link">typeof</a></code>.</p></dd>
+
+ <dt><code>extent</code></dt>
+<dd><p>a list, each of whose components is a numeric vector giving the dimension of an object, or its length if it is dimensionless.</p></dd>
+
+ <dt><code>object.size</code></dt>
+<dd><p>a numeric vector giving the object sizes in bytes, as returned by function <code><a href="https://rdrr.io/r/utils/object.size.html" class="external-link">object.size</a></code>.</p></dd>
+
+
+</dl><p>The purpose of the dedicated class <code>objects.summary</code> is only to provide customized
 <code>print</code> and <code>summary</code> methods.</p>
     </div>
     <div class="section level2">
