@@ -1,4 +1,5 @@
-# osum
+# osum <a href="https://zivankaraman.github.io/osum/"><img src="man/figures/logo.png" align="right" height="140" alt="osum website" /></a>
+
 Provide Summary Information About R Objects
 
 ## Description
@@ -22,16 +23,16 @@ Windows and MacOS binary packages are available from here.
 
 ### Development version
 
-You can install the latest development version of `osum` [GitHub](https://github.com/zivankaraman/osum) with:
+You can install the latest development version of `osum` from [GitHub](https://github.com/zivankaraman/osum) with:
 
 ``` r
-require(remotes)
-install_github("zivankaraman/osum")
+# install.packages("remotes")
+remotes::install_github("zivankaraman/osum")
 ```
 
 ## Usage
 
-Read through the [vignette](https://zivankaraman.github.io/osum) to learn how to use the package.
+Read through the [GET STARTED](https://zivankaraman.github.io/osum/articles/osum.html) to learn how to use the package.
 
 ## License
 

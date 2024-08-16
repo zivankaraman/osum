@@ -22,9 +22,30 @@ knitr::opts_chunk$set(
 )
 ```
 
-## Introduction and Motivation
+## Motivation
 
 Before ***R*** became available, I was a heavy user of the S-PLUS™ software, a commercial declination of ***R***'s ancestor ***S***. It had a very practical function called `objects.summary`, which would list objects from an environment in a tabular form (basically as a `data.frame`) with some interesting attributes including class, mode, dimensions, and size. I couldn't find its equivalent in ***R***, so I wrote one 😊
+
+## Installation
+
+### Stable version
+
+You can install the current stable version of `osum` from [CRAN](https://cran.r-project.org/) via:
+
+```{r install.CRAN,eval=FALSE,purl=FALSE}
+install.packages("osum")
+```
+
+Windows and MacOS binary packages are available from here.
+
+### Development version
+
+You can install the latest development version of `osum` from [GitHub](https://github.com/zivankaraman/osum) with:
+
+```{r install.GitHub,eval=FALSE,purl=FALSE}
+require(remotes)
+install_github("zivankaraman/osum")
+```
 
 ```{r setup,include=FALSE}
 library(osum)
