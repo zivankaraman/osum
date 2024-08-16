@@ -7,7 +7,7 @@ Authors@R:
            comment = c(ORCID = "0000-0002-8933-4589"))
 Description: Inspired by S-PLUS function 'objects.summary', provides a
     function with the same name that returns data class, storage mode,
-    mode, typeof, dimension, and size information for R objects in the
+    mode, type, dimension, and size information for R objects in the
     specified environment. Various filtering and sorting options are also
     proposed.
 License: GPL-3

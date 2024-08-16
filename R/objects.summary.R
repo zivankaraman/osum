@@ -78,18 +78,16 @@
 #' @return An object of (S3) class \code{"objects.summary"}, which inherits from class \code{"data.frame"}.
 #' Its components (printed as columns) are those specified in argument \code{what}. Each component
 #' contains one type of information for all selected objects. They are at most the following:
-#' \itemize{
-#'  \item{\code{data.class}}{ - a factor (if \code{all.classes=FALSE)}, or a list of character
+#'  \item{\code{data.class}}{a factor (if \code{all.classes=FALSE)}, or a list of character
 #'  vectors (if \code{all.classes=TRUE)} containing the data class information. This is defined
 #'  as in the function \code{\link{data.class}}, with the exception that when \code{all.classes=TRUE}, the summary
 #'  will contain the entire class attribute for each object which has one, whereas function \code{data.class}
 #'  returns only the first element of this vector.}
-#'  \item{\code{storage.mode}}{ - a factor giving the storage mode information, as returned by function \code{\link{storage.mode}}.}
-#'  \item{\code{mode}}{ - a factor giving the mode information, as returned by function \code{\link{mode}}.}
-#'  \item{\code{typeof}}{ - a factor giving the R internal type or storage mode information, as returned by function \code{\link{typeof}}.}
-#'  \item{\code{extent}}{ -  a list, each of whose components is a numeric vector giving the dimension of an object, or its length if it is dimensionless.}
-#'  \item{\code{object.size}}{ - a numeric vector giving the object sizes in bytes, as returned by function \code{\link{object.size}}.}
-#' }
+#'  \item{\code{storage.mode}}{a factor giving the storage mode information, as returned by function \code{\link{storage.mode}}.}
+#'  \item{\code{mode}}{a factor giving the mode information, as returned by function \code{\link{mode}}.}
+#'  \item{\code{typeof}}{a factor giving the R internal type or storage mode information, as returned by function \code{\link{typeof}}.}
+#'  \item{\code{extent}}{a list, each of whose components is a numeric vector giving the dimension of an object, or its length if it is dimensionless.}
+#'  \item{\code{object.size}}{a numeric vector giving the object sizes in bytes, as returned by function \code{\link{object.size}}.}
 #'
 #' The purpose of the dedicated class \code{objects.summary} is only to provide customized
 #' \code{print} and \code{summary} methods.
