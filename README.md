@@ -13,7 +13,7 @@ options are also proposed, as well as the custom print and summary methods and o
 
 ### Stable version
 
-You can install the current stable version of `osum` from [CRAN](https://cran.r-project.org/) via:
+You can install the current stable version of `osum` from [CRAN](https://cran.r-project.org/):
 
 ``` r
 install.packages("osum")
@@ -23,7 +23,7 @@ Windows and macOS binary packages are available from here.
 
 ### Development version
 
-You can install the latest development version of `osum` from [GitHub](https://github.com/zivankaraman/osum) with:
+You can install the development version of `osum` including latest features from  [GitHub](https://github.com/zivankaraman/osum):
 
 ``` r
 # install.packages("remotes")
@@ -32,7 +32,7 @@ remotes::install_github("zivankaraman/osum")
 
 ## Usage
 
-Read through the [GET STARTED](https://zivankaraman.github.io/osum/articles/osum.html) to learn how to use the package.
+Read through the [Get started](https://zivankaraman.github.io/osum/articles/osum.html) to learn how to use the package.
 
 ## License
 

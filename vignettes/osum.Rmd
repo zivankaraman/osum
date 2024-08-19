@@ -30,7 +30,7 @@ Before ***R*** became available, I was a heavy user of the S-PLUS™ software, a
 
 ### Stable version
 
-You can install the current stable version of `osum` from [CRAN](https://cran.r-project.org/) via:
+You can install the current stable version of `osum` from [CRAN](https://cran.r-project.org/):
 
 ```{r install.CRAN,eval=FALSE,purl=FALSE}
 install.packages("osum")
@@ -40,7 +40,7 @@ Windows and macOS binary packages are available from here.
 
 ### Development version
 
-You can install the latest development version of `osum` from [GitHub](https://github.com/zivankaraman/osum) with:
+You can install the development version of `osum` including latest features from  [GitHub](https://github.com/zivankaraman/osum):
 
 ```{r install.GitHub,eval=FALSE,purl=FALSE}
 require(remotes)
