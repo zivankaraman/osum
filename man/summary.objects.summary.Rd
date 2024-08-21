@@ -33,11 +33,9 @@ Summarize an object of class \code{objects.summary} with some specific formattin
 options before using \code{summary.data.frame}.
 }
 \examples{
-if (interactive()) {
-    os <- objects.summary("package:datasets")
-    print(summary(os, format.extent = FALSE, maxsum = 10, quantile.type = 7))
-    print(summary(os, format.extent = TRUE, maxsum = 12, quantile.type = 1))
-}
+os <- objects.summary("package:datasets")
+print(summary(os, format.extent = FALSE, maxsum = 10, quantile.type = 7))
+print(summary(os, format.extent = TRUE, maxsum = 12, quantile.type = 1))
 }
 \seealso{
 \code{\link{objects.summary}}, \code{\link{summary.data.frame}}, \code{\link{quantile}}

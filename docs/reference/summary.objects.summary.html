@@ -86,11 +86,57 @@ arguments' values) and collating the results.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/interactive.html" class="external-link">interactive</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
-<span class="r-in"><span>    <span class="va">os</span> <span class="op">&lt;-</span> <span class="fu"><a href="objects.summary.html">objects.summary</a></span><span class="op">(</span><span class="st">"package:datasets"</span><span class="op">)</span></span></span>
-<span class="r-in"><span>    <span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">os</span>, format.extent <span class="op">=</span> <span class="cn">FALSE</span>, maxsum <span class="op">=</span> <span class="fl">10</span>, quantile.type <span class="op">=</span> <span class="fl">7</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-in"><span>    <span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">os</span>, format.extent <span class="op">=</span> <span class="cn">TRUE</span>, maxsum <span class="op">=</span> <span class="fl">12</span>, quantile.type <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">os</span> <span class="op">&lt;-</span> <span class="fu"><a href="objects.summary.html">objects.summary</a></span><span class="op">(</span><span class="st">"package:datasets"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">os</span>, format.extent <span class="op">=</span> <span class="cn">FALSE</span>, maxsum <span class="op">=</span> <span class="fl">10</span>, quantile.type <span class="op">=</span> <span class="fl">7</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           data.class    storage.mode        mode          typeof  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  data.frame    :37   character: 2    character: 2   character: 2  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  ts            :28   double   :49    list     :48   double   :49  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  matrix        : 8   integer  : 5    numeric  :54   integer  : 5  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  nfnGroupedData: 7   list     :48                   list     :48  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  numeric       : 6                                                </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  table         : 5                                                </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  list          : 4                                                </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  character     : 2                                                </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  dist          : 2                                                </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  (Other)       : 5                                                </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         extent    object.size   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          50: 5   Min.   :  216  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          72: 4   1st Qu.: 1306  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           3: 3   Median : 2456  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         100: 3   Mean   : 6051  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          48: 2   3rd Qu.: 5838  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         150: 2   Max.   :64304  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        6, 2: 2                  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           2: 1                  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          11: 1                  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  (Other)   :81                  </span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">os</span>, format.extent <span class="op">=</span> <span class="cn">TRUE</span>, maxsum <span class="op">=</span> <span class="fl">12</span>, quantile.type <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           data.class    storage.mode        mode          typeof  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  array         : 1   character: 2    character: 2   character: 2  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  character     : 2   double   :49    list     :48   double   :49  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  data.frame    :37   integer  : 5    numeric  :54   integer  : 5  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  dist          : 2   list     :48                   list     :48  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  factor        : 2                                                </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  list          : 4                                                </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  matrix        : 8                                                </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  mts           : 2                                                </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  nfnGroupedData: 7                                                </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  numeric       : 6                                                </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  table         : 5                                                </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  ts            :28                                                </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       extent    object.size   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  50      : 5   Min.   :  216  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  72      : 4   1st Qu.: 1264  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  100     : 3   Median : 2432  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  3       : 3   Mean   : 6051  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  150     : 2   3rd Qu.: 5816  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  48      : 2   Max.   :64304  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  6 x 2   : 2                  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  100 x 3 : 1                  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  100 x 4 : 1                  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  1000 x 5: 1                  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  108     : 1                  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  (Other) :79                  </span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

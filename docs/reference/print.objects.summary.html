@@ -79,6 +79,10 @@ product (d1 x d2) or left as list (d1, d2). Default: getOption("osum.format.exte
 
 </dl></div>
     <div class="section level2">
+    <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
+    <p>No return value, called for side effects.</p>
+    </div>
+    <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
     <p><code>max.rows</code> computes an adequate value to be passed as <code>max</code> argument to <code>print.data.frame</code>.
 By default, when NULL, getOption("max.print") is used by <code>print.data.frame</code>.</p>
@@ -90,12 +94,33 @@ By default, when NULL, getOption("max.print") is used by <code>print.data.frame<
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/interactive.html" class="external-link">interactive</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
-<span class="r-in"><span>    <span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="fu"><a href="objects.summary.html">objects.summary</a></span><span class="op">(</span><span class="st">"package:datasets"</span>, all.classes <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>        format.extent <span class="op">=</span> <span class="cn">FALSE</span>, max.rows <span class="op">=</span> <span class="fl">6</span><span class="op">)</span></span></span>
-<span class="r-in"><span>    <span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="fu"><a href="objects.summary.html">objects.summary</a></span><span class="op">(</span><span class="st">"package:datasets"</span>, all.classes <span class="op">=</span> <span class="cn">TRUE</span>, data.class <span class="op">=</span> <span class="st">"array"</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>        data.class.width <span class="op">=</span> <span class="fl">22</span>, format.extent <span class="op">=</span> <span class="cn">TRUE</span>, max.rows <span class="op">=</span> <span class="fl">6</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="fu"><a href="objects.summary.html">objects.summary</a></span><span class="op">(</span><span class="st">"package:datasets"</span>, all.classes <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>    format.extent <span class="op">=</span> <span class="cn">FALSE</span>, max.rows <span class="op">=</span> <span class="fl">6</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                   data.class storage.mode    mode typeof     extent object.size</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> AirPassengers             ts       double numeric double        144        1616</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> BJsales                   ts       double numeric double        150        1664</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> BJsales.lead              ts       double numeric double        150        1664</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> BOD               data.frame         list    list   list       6, 2        1176</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> CO2           nfnGroupedData         list    list   list      84, 5        9976</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ChickWeight   nfnGroupedData         list    list   list     578, 4       22696</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [ reached 'max' / getOption("max.print") -- omitted 98 rows ]</span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="fu"><a href="objects.summary.html">objects.summary</a></span><span class="op">(</span><span class="st">"package:datasets"</span>, all.classes <span class="op">=</span> <span class="cn">TRUE</span>, data.class <span class="op">=</span> <span class="st">"array"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>    data.class.width <span class="op">=</span> <span class="fl">22</span>, format.extent <span class="op">=</span> <span class="cn">TRUE</span>, max.rows <span class="op">=</span> <span class="fl">6</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                   data.class storage.mode    mode typeof</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> EuStockMarkets        mts, ts, matrix, array       double numeric double</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Seatbelts             mts, ts, matrix, array       double numeric double</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> USPersonalExpenditure          matrix, array       double numeric double</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> VADeaths                       matrix, array       double numeric double</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> WorldPhones                    matrix, array       double numeric double</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> euro.cross                     matrix, array       double numeric double</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                         extent object.size</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> EuStockMarkets        1860 x 4       60824</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Seatbelts              192 x 8       13872</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> USPersonalExpenditure    5 x 5        1448</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> VADeaths                 5 x 4        1264</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> WorldPhones              7 x 7        1800</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> euro.cross             11 x 11        2944</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [ reached 'max' / getOption("max.print") -- omitted 5 rows ]</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

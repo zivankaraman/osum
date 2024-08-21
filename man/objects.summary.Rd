@@ -112,31 +112,29 @@ It is possible to use the attributes that are not returned (not listed in \code{
 in the \code{filter} and \code{order} expressions.
 }
 \examples{
-if (interactive()) {
-    .Ob <- 1
-    a <- letters[1:5]
-    x <- rnorm(20)
-    i <- 1:10
-    l <- list(a = a, i = i, x = x)
-    df <- iris
-    arr <- iris3
-    myfunc <- function() {ls()}
-    objects.summary()
-    objects.summary(pattern = "O")
-    objects.summary(pattern = "O", all.objects = TRUE)
+.Ob <- 1
+a <- letters[1:5]
+x <- rnorm(20)
+i <- 1:10
+l <- list(a = a, i = i, x = x)
+df <- iris
+arr <- iris3
+myfunc <- function() {ls()}
+objects.summary()
+objects.summary(pattern = "O")
+objects.summary(pattern = "O", all.objects = TRUE)
 
-    objects.summary(mode = "function")
-    objects.summary("package:grDevices", filter = mode != "function")
-    objects.summary("package:datasets", all.classes = TRUE,
-        filter = sapply(data.class, length) > 1)
-    # shows an empty list because inside myfunc no variables are defined
-    myfunc <- function() {objects.summary()}
-    myfunc()
+objects.summary(mode = "function")
+objects.summary("package:grDevices", filter = mode != "function")
+objects.summary("package:datasets", all.classes = TRUE,
+    filter = sapply(data.class, length) > 1)
+# shows an empty list because inside myfunc no variables are defined
+myfunc <- function() {objects.summary()}
+myfunc()
 
-    # define a local variable inside myfunc
-    myfunc <- function() {y <- 1; objects.summary()}
-    myfunc()                # shows "y"
-}
+# define a local variable inside myfunc
+myfunc <- function() {y <- 1; objects.summary()}
+myfunc()                # shows "y"
 
 }
 \references{

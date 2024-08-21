@@ -26,6 +26,9 @@ product (d1 x d2) or left as list (d1, d2). Default: getOption("osum.format.exte
 
 \item{max.rows}{integer, maximal number of rows to print. Default: getOption("osum.max.rows", default = NULL)}
 }
+\value{
+No return value, called for side effects.
+}
 \description{
 Print an object of class \code{objects.summary} with some specific formatting
 options before using \code{print.data.frame}.
@@ -35,12 +38,10 @@ options before using \code{print.data.frame}.
 By default, when NULL, getOption("max.print") is used by \code{print.data.frame}.
 }
 \examples{
-if (interactive()) {
-    print(objects.summary("package:datasets", all.classes = FALSE),
-        format.extent = FALSE, max.rows = 6)
-    print(objects.summary("package:datasets", all.classes = TRUE, data.class = "array"),
-        data.class.width = 22, format.extent = TRUE, max.rows = 6)
-}
+print(objects.summary("package:datasets", all.classes = FALSE),
+    format.extent = FALSE, max.rows = 6)
+print(objects.summary("package:datasets", all.classes = TRUE, data.class = "array"),
+    data.class.width = 22, format.extent = TRUE, max.rows = 6)
 }
 \seealso{
 \code{\link{objects.summary}}, \code{\link{print.data.frame}}
