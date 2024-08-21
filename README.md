@@ -4,7 +4,7 @@ Provide Summary Information About R Objects
 
 ## Description
 
-Inspired by S-PLUS™ function 'objects.summary', provides a function with the 
+Inspired by S-PLUS™ function `objects.summary()`, provides a function with the 
 same name that returns a data.frame with data class, storage mode, mode, typeof, dimension, and size 
 information for R objects from the specified environment. Various filtering and sorting
 options are also proposed, as well as the custom print and summary methods and options.

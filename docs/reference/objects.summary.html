@@ -208,31 +208,89 @@ object-oriented programming.</p></div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/interactive.html" class="external-link">interactive</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
-<span class="r-in"><span>    <span class="va">.Ob</span> <span class="op">&lt;-</span> <span class="fl">1</span></span></span>
-<span class="r-in"><span>    <span class="va">a</span> <span class="op">&lt;-</span> <span class="va">letters</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span></span></span>
-<span class="r-in"><span>    <span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">20</span><span class="op">)</span></span></span>
-<span class="r-in"><span>    <span class="va">i</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span></span></span>
-<span class="r-in"><span>    <span class="va">l</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>a <span class="op">=</span> <span class="va">a</span>, i <span class="op">=</span> <span class="va">i</span>, x <span class="op">=</span> <span class="va">x</span><span class="op">)</span></span></span>
-<span class="r-in"><span>    <span class="va">df</span> <span class="op">&lt;-</span> <span class="va">iris</span></span></span>
-<span class="r-in"><span>    <span class="va">arr</span> <span class="op">&lt;-</span> <span class="va">iris3</span></span></span>
-<span class="r-in"><span>    <span class="va">myfunc</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span><span class="fu"><a href="https://rdrr.io/r/base/ls.html" class="external-link">ls</a></span><span class="op">(</span><span class="op">)</span><span class="op">}</span></span></span>
-<span class="r-in"><span>    <span class="fu">objects.summary</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-in"><span>    <span class="fu">objects.summary</span><span class="op">(</span>pattern <span class="op">=</span> <span class="st">"O"</span><span class="op">)</span></span></span>
-<span class="r-in"><span>    <span class="fu">objects.summary</span><span class="op">(</span>pattern <span class="op">=</span> <span class="st">"O"</span>, all.objects <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">.Ob</span> <span class="op">&lt;-</span> <span class="fl">1</span></span></span>
+<span class="r-in"><span><span class="va">a</span> <span class="op">&lt;-</span> <span class="va">letters</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span></span></span>
+<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">20</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">i</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span></span></span>
+<span class="r-in"><span><span class="va">l</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>a <span class="op">=</span> <span class="va">a</span>, i <span class="op">=</span> <span class="va">i</span>, x <span class="op">=</span> <span class="va">x</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="va">iris</span></span></span>
+<span class="r-in"><span><span class="va">arr</span> <span class="op">&lt;-</span> <span class="va">iris3</span></span></span>
+<span class="r-in"><span><span class="va">myfunc</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span><span class="fu"><a href="https://rdrr.io/r/base/ls.html" class="external-link">ls</a></span><span class="op">(</span><span class="op">)</span><span class="op">}</span></span></span>
+<span class="r-in"><span><span class="fu">objects.summary</span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        data.class storage.mode      mode    typeof     extent object.size</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> a       character    character character character          5         376</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> arr         array       double   numeric    double 50 x 4 x 3        5816</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> df     data.frame         list      list      list    150 x 5        7256</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> i         numeric      integer   numeric   integer         10          96</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> l            list         list      list      list          3        1120</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> myfunc   function     function  function   closure          1        4272</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> x         numeric       double   numeric    double         20         208</span>
+<span class="r-in"><span><span class="fu">objects.summary</span><span class="op">(</span>pattern <span class="op">=</span> <span class="st">"O"</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] data.class   storage.mode mode         typeof       extent      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [6] object.size </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;0 rows&gt; (or 0-length row.names)</span>
+<span class="r-in"><span><span class="fu">objects.summary</span><span class="op">(</span>pattern <span class="op">=</span> <span class="st">"O"</span>, all.objects <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     data.class storage.mode    mode typeof extent object.size</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> .Ob    numeric       double numeric double      1          56</span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span>    <span class="fu">objects.summary</span><span class="op">(</span>mode <span class="op">=</span> <span class="st">"function"</span><span class="op">)</span></span></span>
-<span class="r-in"><span>    <span class="fu">objects.summary</span><span class="op">(</span><span class="st">"package:grDevices"</span>, filter <span class="op">=</span> <span class="va">mode</span> <span class="op">!=</span> <span class="st">"function"</span><span class="op">)</span></span></span>
-<span class="r-in"><span>    <span class="fu">objects.summary</span><span class="op">(</span><span class="st">"package:datasets"</span>, all.classes <span class="op">=</span> <span class="cn">TRUE</span>,</span></span>
-<span class="r-in"><span>        filter <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="va">data.class</span>, <span class="va">length</span><span class="op">)</span> <span class="op">&gt;</span> <span class="fl">1</span><span class="op">)</span></span></span>
-<span class="r-in"><span>    <span class="co"># shows an empty list because inside myfunc no variables are defined</span></span></span>
-<span class="r-in"><span>    <span class="va">myfunc</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span><span class="fu">objects.summary</span><span class="op">(</span><span class="op">)</span><span class="op">}</span></span></span>
-<span class="r-in"><span>    <span class="fu">myfunc</span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">objects.summary</span><span class="op">(</span>mode <span class="op">=</span> <span class="st">"function"</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        data.class storage.mode     mode  typeof extent object.size</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> myfunc   function     function function closure      1        4272</span>
+<span class="r-in"><span><span class="fu">objects.summary</span><span class="op">(</span><span class="st">"package:grDevices"</span>, filter <span class="op">=</span> <span class="va">mode</span> <span class="op">!=</span> <span class="st">"function"</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             data.class storage.mode      mode    typeof extent object.size</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Hershey           list         list      list      list      3        2024</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blues9       character    character character character      9         680</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> colorspaces       list         list      list      list      6      478024</span>
+<span class="r-in"><span><span class="fu">objects.summary</span><span class="op">(</span><span class="st">"package:datasets"</span>, all.classes <span class="op">=</span> <span class="cn">TRUE</span>,</span></span>
+<span class="r-in"><span>    filter <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="va">data.class</span>, <span class="va">length</span><span class="op">)</span> <span class="op">&gt;</span> <span class="fl">1</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                         data.class storage.mode    mode typeof   extent</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> CO2                   nfnGroup....         list    list   list   84 x 5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ChickWeight           nfnGroup....         list    list   list  578 x 4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> DNase                 nfnGroup....         list    list   list  176 x 3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> EuStockMarkets        mts, ts,....       double numeric double 1860 x 4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Indometh              nfnGroup....         list    list   list   66 x 3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Loblolly              nfnGroup....         list    list   list   84 x 3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Orange                nfnGroup....         list    list   list   35 x 3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Seatbelts             mts, ts,....       double numeric double  192 x 8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Theoph                nfnGroup....         list    list   list  132 x 5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> USPersonalExpenditure matrix, ....       double numeric double    5 x 5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> VADeaths              matrix, ....       double numeric double    5 x 4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> WorldPhones           matrix, ....       double numeric double    7 x 7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> euro.cross            matrix, ....       double numeric double  11 x 11</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> freeny.x              matrix, ....       double numeric double   39 x 4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> stack.x               matrix, ....       double numeric double   21 x 3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> state.x77             matrix, ....       double numeric double   50 x 8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> volcano               matrix, ....       double numeric double  87 x 61</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                       object.size</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> CO2                          9976</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ChickWeight                 22696</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> DNase                        8256</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> EuStockMarkets              60824</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Indometh                     5904</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Loblolly                    12120</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Orange                       5232</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Seatbelts                   13872</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Theoph                      10000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> USPersonalExpenditure        1448</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> VADeaths                     1264</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> WorldPhones                  1800</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> euro.cross                   2944</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> freeny.x                     2008</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> stack.x                      1168</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> state.x77                    7672</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> volcano                     42672</span>
+<span class="r-in"><span><span class="co"># shows an empty list because inside myfunc no variables are defined</span></span></span>
+<span class="r-in"><span><span class="va">myfunc</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span><span class="fu">objects.summary</span><span class="op">(</span><span class="op">)</span><span class="op">}</span></span></span>
+<span class="r-in"><span><span class="fu">myfunc</span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] data.class   storage.mode mode         typeof       extent      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [6] object.size </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;0 rows&gt; (or 0-length row.names)</span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span>    <span class="co"># define a local variable inside myfunc</span></span></span>
-<span class="r-in"><span>    <span class="va">myfunc</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fl">1</span>; <span class="fu">objects.summary</span><span class="op">(</span><span class="op">)</span><span class="op">}</span></span></span>
-<span class="r-in"><span>    <span class="fu">myfunc</span><span class="op">(</span><span class="op">)</span>                <span class="co"># shows "y"</span></span></span>
-<span class="r-in"><span><span class="op">}</span></span></span>
+<span class="r-in"><span><span class="co"># define a local variable inside myfunc</span></span></span>
+<span class="r-in"><span><span class="va">myfunc</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fl">1</span>; <span class="fu">objects.summary</span><span class="op">(</span><span class="op">)</span><span class="op">}</span></span></span>
+<span class="r-in"><span><span class="fu">myfunc</span><span class="op">(</span><span class="op">)</span>                <span class="co"># shows "y"</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   data.class storage.mode    mode typeof extent object.size</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> y    numeric       double numeric double      1          56</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>

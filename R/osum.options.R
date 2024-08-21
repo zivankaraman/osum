@@ -26,13 +26,11 @@
 #' name name as argument, e.g. \code{osum.options("osum.max.rows")}, which will return a named
 #' \emph{list} of length one with the option's value.
 #' @examples
-#' if (interactive()) {
-#'     old_opt <- osum.options(osum.data.class.width = 12, osum.max.rows = 25)
-#'     cat("current values of all 'osum' options:", sep = "\n")
-#'     print(osum.options())
-#'     cat("previous values of the changed 'osum' options:", sep = "\n")
-#'     print(old_opt)
-#' }
+#' old_opt <- osum.options(osum.data.class.width = 12, osum.max.rows = 25)
+#' cat("current values of all 'osum' options:", sep = "\n")
+#' print(osum.options())
+#' cat("previous values of the changed 'osum' options:", sep = "\n")
+#' print(old_opt)
 #' @export
 osum.options <- function(osum.data.class.width, osum.format.extent, osum.information, osum.max.rows) {
     opt <- options()

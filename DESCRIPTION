@@ -5,7 +5,7 @@ Version: 0.1.0
 Authors@R: 
     person("Zivan", "Karaman", , "zivan.karaman@gmail.com", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0000-0002-8933-4589"))
-Description: Inspired by S-PLUS function 'objects.summary', provides a
+Description: Inspired by 'S-PLUS' function objects.summary(), provides a
     function with the same name that returns data class, storage mode,
     mode, type, dimension, and size information for R objects in the
     specified environment. Various filtering and sorting options are also
