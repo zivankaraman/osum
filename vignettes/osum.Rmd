@@ -30,7 +30,7 @@ Before ***R*** became available, I was a heavy user of the S-PLUS™ software, a
 
 ### Stable version
 
-You can install the current stable version of `osum` from [CRAN](https://cran.r-project.org/):
+You can install the current stable version of `osum` from [CRAN](https://cran.r-project.org/package=osum):
 
 ```{r install.CRAN,eval=FALSE,purl=FALSE}
 install.packages("osum")

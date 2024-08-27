@@ -13,7 +13,7 @@ options are also proposed, as well as the custom print and summary methods and o
 
 ### Stable version
 
-You can install the current stable version of `osum` from [CRAN](https://cran.r-project.org/):
+You can install the current stable version of `osum` from [CRAN](https://cran.r-project.org/package=osum):
 
 ``` r
 install.packages("osum")
